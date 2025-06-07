@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.grids {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+}
