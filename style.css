@@ -9,6 +9,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
+}
+
+.generate-grid-btn {
+  margin: 10px;
+  padding: 8px;
 }
 
 .container {
