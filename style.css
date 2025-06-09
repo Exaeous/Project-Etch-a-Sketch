@@ -5,6 +5,12 @@ body {
   align-items: center;
 }
 
+.generate-grid-button {
+  margin-bottom: 6px;
+  padding: 8px;
+  font-size: 14px;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
