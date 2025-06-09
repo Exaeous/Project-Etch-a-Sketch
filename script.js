@@ -4,6 +4,12 @@ let userDesiredGrid = 0;
 
 const container = document.querySelector(".container");
 
+const generateButton = document
+  .querySelector(".generate-button")
+  .addEventListener("click", () => {
+    userDesiredGrid = parseInt(prompt("How many grid tiles do you want?", 16));
+  });
+
 for (let i = 1; i <= 16; i++) {
   let defaultGrid = document.createElement("div");
   defaultGrid.classList.add("default-grid");
