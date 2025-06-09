@@ -9,13 +9,21 @@ function createGrid(squaresPerSide) {
   const squareSize = totalSize / squaresPerSide;
 
   for (let i = 0; i < squaresPerSide * squaresPerSide; i++) {
-    const square = document.createElement("div");
+    let square = document.createElement("div");
     square.classList.add("grid-square");
     square.style.width = `${squareSize}px`;
     square.style.height = `${squareSize}px`;
     container.appendChild(square);
+
+    square = document.querySelectorAll(".grid-square");
+    square.forEach((grid) => {
+      grid.addEventListener("mouseover", () => {
+        grid.style.backgroundColor = "black";
+      });
+    });
   }
 }
+
 generateGridButton.addEventListener("click", () => {
   let input = prompt("Enter grid size (1-100):", "16");
   let size = parseInt(input);
