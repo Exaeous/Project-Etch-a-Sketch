@@ -1,8 +1,10 @@
 "use strict";
 
 const container = document.querySelector(".container");
+const generateGridButton = document.querySelector(".generate-grid-button");
 
 function createGrid(squaresPerSide) {
+  container.innerHTML = "";
   const totalSize = 600;
   const squareSize = totalSize / squaresPerSide;
 
@@ -14,5 +16,14 @@ function createGrid(squaresPerSide) {
     container.appendChild(square);
   }
 }
+generateGridButton.addEventListener("click", () => {
+  let input = prompt("Enter grid size (1-100):", "16");
+  let size = parseInt(input);
+  if (isNaN(size) || size < 1 || size > 100) {
+    alert("Please enter a valid number between 1 and 100.");
+    return;
+  }
+  createGrid(size);
+});
 
 createGrid(16);
