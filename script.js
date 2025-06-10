@@ -25,10 +25,10 @@ function createGrid(squaresPerSide) {
 }
 
 generateGridButton.addEventListener("click", () => {
-  let input = prompt("Enter grid size (1-100):", "16");
+  let input = prompt("Enter grid size (1-20):", "16");
   let size = parseInt(input);
-  if (isNaN(size) || size < 1 || size > 100) {
-    alert("Please enter a valid number between 1 and 100.");
+  if (isNaN(size) || size < 1 || size > 20) {
+    alert("Please enter a valid number between 1 and 20.");
     return;
   }
   createGrid(size);
